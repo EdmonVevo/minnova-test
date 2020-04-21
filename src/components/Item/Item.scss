@@ -1,0 +1,116 @@
+@import "../../assets/styles/global";
+
+.item {
+    height: max-content;
+    min-height: 400px;
+    overflow: hidden;
+    @extend %container-styles;
+
+    &__top-section,
+    &__bottom-section  {
+        height:50%;
+    }
+
+    &__top-section {
+        background: $main-blue-ligher;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 220px;
+    }
+
+    &__type-container {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__type__content {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__type {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @extend %container-styles;
+        color: $main-blue;
+        padding: 5px 10px;
+        height: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: max-content;
+    }
+
+    &__type__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        @extend %container-styles;
+        color: $main-blue;
+        border-radius: 50%;
+        font-size: 20px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__bottom-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        min-height: 170px;
+
+        h2 {
+            color: $main-grey;
+        }
+        .item__bottom__date {
+            color: $main-grey;
+        }
+    }
+
+    &__join-text {
+        font-weight: bold;
+        color: #fff;
+        margin-left: 10px;
+    }
+
+    &__join-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__join-icon {
+        font-weight: bold;
+        color: #fff;
+        font-size: 30px;
+    }
+
+    &__title-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    &__date-section {
+        display: flex;
+        justify-content: flex-start;
+    }
+}

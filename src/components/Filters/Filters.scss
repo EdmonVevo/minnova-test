@@ -1,0 +1,50 @@
+@import "../../assets/styles/global";
+
+.filters-container {
+    margin-bottom: 20px;
+    @extend %container-styles;
+
+    .filters {
+        display: flex;
+        justify-content: flex-start;
+        height: 60px;
+        border-bottom: 1px solid #d6d6d6;
+
+        &__title {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            color: $main-grey;
+        }
+    }
+    .filters-selective-container {
+        padding: 15px;  
+    }
+
+    .filters-selective {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+
+        @media screen and (max-width: "450px") {
+          justify-content: space-between;
+        }
+        .selective-filter-item {
+            margin-right: 15px;
+            cursor: pointer;
+            box-shadow: none;
+            border: 1px solid #d7d7d7;
+            color: $main-grey;
+
+            @media screen and (max-width: 450px) { 
+                margin: 0;
+            }
+            
+            &--selected {
+                border-color: transparent;
+                background: $main-blue-ligher;
+                color: $main-blue;
+            }
+        }
+    }
+}

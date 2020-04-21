@@ -1,0 +1,18 @@
+@import "../../assets/styles/global";
+
+.cyrcle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        @extend %container-styles;
+        border-radius: 50%;
+        font-size: 20px;
+
+        @media screen and (max-width: 450px) {
+          height: 30px;
+          width: 30px;
+          font-size: 14px;
+        }
+}
